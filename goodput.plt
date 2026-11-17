@@ -1,4 +1,3 @@
-# Goodput plot script (Experiment 6)
 set terminal pdf
 set output "goodput.pdf"
 set title "Goodput Vs Packet Size"

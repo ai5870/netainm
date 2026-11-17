@@ -1,8 +1,3 @@
-/*
- * Title: Point to Point Link
- * WNM Lab - ns-3 Simulation
- */
-
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/internet-module.h"

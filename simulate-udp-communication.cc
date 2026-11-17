@@ -1,8 +1,3 @@
-/*
- * Title: Simulate UDP Communication
- * WNM Lab - ns-3 Simulation
- */
-
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/internet-module.h"
@@ -16,7 +11,7 @@ int main() {
     nodes.Create(2);
 
     LogComponentEnable("UdpEchoClientApplication", LOG_LEVEL_INFO);
-    // Point:
+
     LogComponentEnable("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
     PointToPointHelper p2p;

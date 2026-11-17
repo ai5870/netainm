@@ -1,8 +1,3 @@
-/*
- * Title: Implement Access Control List
- * WNM Lab - ns-3 Simulation
- */
-
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/internet-module.h"
@@ -13,7 +8,6 @@ using namespace ns3;
 
 NS_LOG_COMPONENT_DEFINE("AclOnlySim");
 
-// ACL filter function: drops every received packet
 bool ACLFilter(Ptr<NetDevice> dev, Ptr<const Packet> pkt, uint16_t proto, const Address &from) {
     NS_LOG_INFO("ACL: Packet dropped");
     return false;
@@ -39,7 +33,6 @@ int main() {
     address.SetBase("10.1.1.0", "255.255.255.0");
     Ipv4InterfaceContainer interfaces = address.Assign(devices);
 
-    // Attach ACL filter as receive callback on node 1 device
     devices.Get(1)->SetReceiveCallback(MakeCallback(&ACLFilter));
 
     UdpEchoServerHelper echoServer(9);

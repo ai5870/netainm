@@ -1,4 +1,3 @@
-# Throughput plot script (Experiment 6)
 set terminal pdf
 set output "Throughput.pdf"
 set title "Throughput Vs Packet Size"
